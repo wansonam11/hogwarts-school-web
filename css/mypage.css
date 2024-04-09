@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Fredericka+the+Great&family=PT+Serif&family=Rajdhani&family=Raleway&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, label {
+  vertical-align: middle;
+}
+
+.h {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
+}
+
+body {
+  background: #333;
+  font: 13px/1.4 "IM Fell French Canon";
+  letter-spacing: 1px;
+  color: #ddd;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+body .background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+header {
+  width: 90vw;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  display: flex;
+  align-items: center;
+  font: bold 30px/1 "orbitron";
+  background: linear-gradient(157.84deg, #f8d494 17.61%, #c19a52 23.28%, #dec291 25.83%, #d0a869 32.36%, #cfa967 37.74%, #fce8c5 42%, #ffdaa3 45.68%, #cfa967 53.62%, #fce8c5 59.01%, #f0c984 64.4%, #d09b5c 72.06%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+header h1 .logo {
+  margin-right: 30px;
+  object-fit: cover;
+  width: 10%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  cursor: pointer;
+}
+header #gnb {
+  display: flex;
+}
+header #gnb li {
+  margin: 0px 40px;
+  width: 120px;
+}
+header #gnb li a {
+  font: bold 14px/1 "arial";
+  color: #fff;
+}
+header #sns {
+  display: flex;
+}
+header #sns li {
+  margin: 0px 10px;
+}
+header #sns li i {
+  font-size: 18px;
+  color: #fff;
+}
+
+section {
+  width: 30vw;
+  height: 20%;
+  position: absolute;
+  left: 10%;
+  bottom: 50vh;
+  z-index: 5;
+}
+section article {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+section article .inner > div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+section article .inner > div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section article .inner > div i {
+  width: 22%;
+  height: 100%;
+  border-right: 1px solid #bbb;
+  float: left;
+  font-size: 50px;
+  color: #fff;
+  text-align: left;
+  box-sizing: border-box;
+  padding-top: 16px;
+  transition: 0.5s;
+}
+section article .inner > div .con {
+  width: 75%;
+  height: 100%;
+  padding-left: 40px;
+  box-sizing: border-box;
+  float: right;
+}
+section article .inner > div .con h2 {
+  font: bold 24px/1 "Raleway";
+  text-shadow: 0px 0px 10px black;
+  color: aqua;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  transform-origin: left center;
+}
+section article .inner > div .con p {
+  font: bold 14px/1.3 "Rajdhani";
+  color: rgb(113, 200, 206);
+  text-shadow: 0px 0px 10px black;
+  transition: 0.5s;
+}
+section article .inner > div:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.6);
+}
+section article .inner > div:hover i {
+  transform: scale(1.2);
+  color: lightcyan;
+  text-shadow: 0px 0px 10px gold;
+}
+section article .inner > div:hover .con h2 {
+  transform: scale(1.1);
+  color: lightcyan;
+  text-shadow: 0px 0px 10px gold;
+}
+section article .inner > div:hover .con p {
+  color: lightcyan;
+  text-shadow: 0px 0px 10px gold;
+}
+
+nav {
+  width: 90vw;
+  height: 45px;
+  margin-left: 100px;
+  position: absolute;
+  bottom: 6vh;
+  display: flex;
+  z-index: 1;
+  cursor: pointer;
+}
+nav span {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 45px;
+  letter-spacing: 1px;
+  font: 17px/1 "orbitron";
+  color: #fff;
+  letter-spacing: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+nav span:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  text-shadow: 0px 0px 10px aqua;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/*# sourceMappingURL=mypage.css.map */
