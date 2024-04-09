@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Fredericka+the+Great&family=PT+Serif&family=Rajdhani&family=Raleway&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, label {
+  vertical-align: middle;
+}
+
+.h {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
+}
+
+body {
+  background: #333;
+  font: 13px/1.4 "IM Fell French Canon";
+  letter-spacing: 1px;
+  color: #ddd;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+body figure {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+body figure header {
+  width: 90vw;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body figure header h1 {
+  display: flex;
+  align-items: center;
+  font: bold 30px/1 "orbitron";
+  color: #fff;
+  text-shadow: 0px 3px 3px #1f1e1e;
+}
+body figure header h1 .logo {
+  margin-right: 30px;
+  object-fit: cover;
+  width: 10%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  cursor: pointer;
+}
+body figure header #gnb {
+  display: flex;
+}
+body figure header #gnb li {
+  margin: 0px 40px;
+  width: 120px;
+}
+body figure header #gnb li a {
+  font: bold 14px/1 "arial";
+  color: #fff;
+  text-shadow: 0px 3px 3px #333;
+}
+body figure header #sns {
+  display: flex;
+}
+body figure header #sns li {
+  margin: 0px 10px;
+}
+body figure header #sns li i {
+  font-size: 18px;
+  color: #fff;
+}
+body figure .wandshop {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+body figure section {
+  width: 22vw;
+  height: 70vh;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  margin-left: -10vw;
+  margin-top: -32vh;
+  transition: 1s;
+}
+body figure section article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body figure section article .inner {
+  width: 85%;
+  height: 100%;
+  border: 1px solid #fff;
+  background: linear-gradient(157.84deg, #f8d494 17.61%, #c19a52 23.28%, #dec291 25.83%, #d0a869 32.36%, #cfa967 37.74%, #fce8c5 42%, #ffdaa3 45.68%, #cfa967 53.62%, #fce8c5 59.01%, #f0c984 64.4%, #d09b5c 72.06%);
+  padding: 2vh 2vw 2vh;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(22, 22, 22);
+  transform: scale(0.8);
+  transition: 1s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  object-fit: cover;
+  opacity: 0.4;
+}
+body figure section article .inner .txt {
+  width: 100%;
+  text-align: center;
+}
+body figure section article .inner .txt img {
+  width: 50%;
+}
+body figure section article .inner .txt h2 {
+  font: 2vw/1 "Raleway";
+  color: rgba(0, 0, 0, 0.5333333333);
+  margin-bottom: 20px;
+}
+body figure section article .inner .txt p {
+  font: 1vw/1 "Rajdhani";
+  color: rgba(0, 0, 0, 0.5333333333);
+  margin-bottom: 15px;
+}
+body figure section article.on .inner {
+  opacity: 1;
+  transform: scale(1);
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation2 {
+  0% {
+    transform: translateY(10%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(10%) rotate(360deg);
+  }
+}
+body figure .btnPrev {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20vw, -50%);
+  display: flex;
+  cursor: pointer;
+  font-size: 0;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+body figure .btnPrev span {
+  font: 20px/1 "IM Fell French Canon";
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0px 0px 3px #333;
+}
+body figure .btnPrev::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform-origin: left center;
+  transform: rotate(-180deg);
+  transition: 0.5s;
+}
+body figure .btnPrev::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform-origin: left center;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+body figure .btnPrev:hover span {
+  transform: translateX(50%);
+  opacity: 0;
+}
+body figure .btnPrev:hover::before {
+  transform: rotate(-30deg);
+}
+body figure .btnPrev:hover::after {
+  transform: rotate(30deg);
+}
+body figure .btnNext {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(20vw, -50%);
+  display: flex;
+  cursor: pointer;
+  font-size: 0;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+body figure .btnNext span {
+  font: 20px/1 "IM Fell French Canon";
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0px 0px 3px #333;
+}
+body figure .btnNext::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform-origin: right center;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+body figure .btnNext::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform-origin: right center;
+  transform: rotate(-180deg);
+  transition: 0.5s;
+}
+body figure .btnNext:hover span {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+body figure .btnNext:hover::before {
+  transform: rotate(30deg);
+}
+body figure .btnNext:hover::after {
+  transform: rotate(-30deg);
+}
+
+/*# sourceMappingURL=wand.css.map */
