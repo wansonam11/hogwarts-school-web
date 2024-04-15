@@ -90,10 +90,12 @@ header #gnb {
 header #gnb li {
   margin: 0px 40px;
   width: 120px;
+  font: bold 14px/1 "Raleway";
+  letter-spacing: 2px;
+  filter: brightness(150%);
 }
 header #gnb li a {
-  font: bold 14px/1 "arial";
-  color: #fff;
+
 }
 header #sns {
   display: flex;
