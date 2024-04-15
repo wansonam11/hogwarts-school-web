@@ -81,6 +81,7 @@ header h1 .logo {
   left: 0px;
   overflow: hidden;
   cursor: pointer;
+  filter: brightness(150%);
 }
 header #gnb {
   display: flex;
@@ -88,10 +89,13 @@ header #gnb {
 header #gnb li {
   margin: 0px 40px;
   width: 120px;
+  font: bold 14px/1 "Raleway";
+  color: #fff;
+  text-shadow: 0px 3px 3px #333;
+  letter-spacing: 2px;
 }
 header #gnb li a {
-  font: bold 14px/1 "arial";
-  color: #fff;
+
 }
 header #sns {
   display: flex;

@@ -75,6 +75,7 @@ body figure header h1 .logo {
   left: 0px;
   overflow: hidden;
   cursor: pointer;
+  filter: brightness(150%);
 }
 body figure header #gnb {
   display: flex;
@@ -82,12 +83,12 @@ body figure header #gnb {
 body figure header #gnb li {
   margin: 0px 40px;
   width: 120px;
-}
-body figure header #gnb li a {
-  font: bold 14px/1 "arial";
+  font: bold 14px/1 "Raleway";
   color: #fff;
   text-shadow: 0px 3px 3px #333;
+  letter-spacing: 2px;
 }
+
 body figure header #sns {
   display: flex;
 }

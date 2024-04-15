@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Fredericka+the+Great&family=PT+Serif&family=Rajdhani&family=Raleway&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, label {
+  vertical-align: middle;
+}
+
+.h {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
+}
+
+body {
+  background: #333;
+  font: 13px/1.4 "IM Fell French Canon";
+  letter-spacing: 1px;
+  color: #ddd;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+body .greathall2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+header {
+  width: 90vw;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  display: flex;
+  align-items: center;
+  font: bold 30px/1 "orbitron";
+  background: linear-gradient(157.84deg, #f8d494 17.61%, #c19a52 23.28%, #dec291 25.83%, #d0a869 32.36%, #cfa967 37.74%, #fce8c5 42%, #ffdaa3 45.68%, #cfa967 53.62%, #fce8c5 59.01%, #f0c984 64.4%, #d09b5c 72.06%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+header h1 .logo {
+  margin-right: 30px;
+  object-fit: cover;
+  width: 10%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 5;
+  filter: brightness(150%);
+}
+header #gnb {
+  display: flex;
+}
+header #gnb li {
+  margin: 0px 40px;
+  width: 120px;
+  font: bold 14px/1 "Raleway";
+  color: #fff;
+  letter-spacing: 2px;
+}
+header #gnb li a {
+}
+header #sns {
+  display: flex;
+}
+header #sns li {
+  margin: 0px 10px;
+}
+header #sns li i {
+  font-size: 18px;
+  color: #fff;
+}
+
+main {
+  width: 60%;
+  height: 44%;
+  position: relative;
+  left: 20%;
+  top: 40%;
+}
+main h1 {
+  position: absolute;
+  left: 0px;
+  top: -50px;
+  font: 34px/1 "Rajdhani";
+  color: #fff;
+  text-shadow: 0px 0px 10px aqua;
+}
+main h1::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 0px;
+  top: -10px;
+}
+main .btnUp {
+  display: block;
+  width: 61px;
+  height: 50px;
+  position: absolute;
+  left: -70px;
+  bottom: 160px;
+}
+main .btnUp::before, main .btnUp::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform-origin: right top;
+  transition: 0.5s 0.2s;
+}
+main .btnUp::before {
+  transform: rotate(45deg);
+}
+main .btnUp::after {
+  transform: rotate(-45deg);
+}
+main .btnUp span {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transition: 0.5s;
+}
+main .btnUp p {
+  font: 12px/1 "orbitron";
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+main .btnUp:hover::before {
+  transform: rotate(45deg) translateY(-40px);
+  opacity: 0;
+}
+main .btnUp:hover::after {
+  transform: rotate(-45deg) translateY(-40px);
+  opacity: 0;
+}
+main .btnUp:hover span {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+main .btnUp:hover p {
+  top: 50%;
+  opacity: 1;
+}
+main .btnDown {
+  display: block;
+  width: 61px;
+  height: 50px;
+  position: absolute;
+  left: -70px;
+  bottom: 0px;
+}
+main .btnDown::before, main .btnDown::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform-origin: right bottom;
+  transition: 0.5s 0.2s;
+}
+main .btnDown::before {
+  transform: rotate(-45deg);
+}
+main .btnDown::after {
+  transform: rotate(45deg);
+}
+main .btnDown span {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transition: 0.5s;
+}
+main .btnDown p {
+  font: 12px/1 "orbitron";
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s 0.4s;
+}
+main .btnDown:hover::before {
+  transform: rotate(-45deg) translateY(40px);
+  opacity: 0;
+}
+main .btnDown:hover::after {
+  transform: rotate(45deg) translateY(40px);
+  opacity: 0;
+}
+main .btnDown:hover span {
+  transform: translateY(40px);
+  opacity: 0;
+}
+main .btnDown:hover p {
+  top: 50%;
+  opacity: 1;
+}
+main .panel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+main .panel li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  perspective: 400px;
+}
+main .panel li .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: 0.6s;
+}
+main .panel li .bg .txt {
+  padding: 30px;
+  letter-spacing: 2px;
+  width: 60%;
+}
+main .panel li .bg .txt h2 {
+  font: bold 40px/1 "Raleway";
+  margin-bottom: 20px;
+}
+main .panel li .bg .txt p {
+  font: normal 18px/1.4 "Raleway";
+  color: #fff;
+  text-shadow: 10px 10px 19px rgb(29, 26, 10);
+}
+main .panel li .bg .pic {
+  width: 20vw;
+  height: 40vh;
+  position: absolute;
+  bottom: 8vh;
+  left: 35vw;
+}
+main .panel li .bg .pic path {
+  stroke: #111;
+  stroke-width: 0;
+  fill: rgba(0, 0, 0, 0);
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  transition: stroke-dashoffset 0s 0.5s, fill 0.5s 1s;
+}
+main .panel li:nth-of-type(1) .bg {
+  background: rgba(255, 255, 255, 0.2);
+}
+main .panel li:nth-of-type(2) .bg {
+  background: rgba(255, 255, 255, 0.2);
+}
+main .panel li:nth-of-type(3) .bg {
+  background: rgba(255, 255, 255, 0.2);
+}
+main .panel li:nth-of-type(4) .bg {
+  background: rgba(255, 255, 255, 0.2);
+}
+main .panel li.on .bg {
+  opacity: 1;
+  transform: translateY(0%) rotateX(0deg);
+}
+main .panel li.on .bg path {
+  fill: rgba(0, 0, 0, 0.5);
+  stroke-dashoffset: 0;
+}
+main .panel li.up .bg {
+  opacity: 0;
+  transform: translateY(-40%) rotateX(10deg);
+}
+main .panel li.down .bg {
+  opacity: 0;
+  transform: translateY(40%) rotateX(-10deg);
+}
+
+/*# sourceMappingURL=pet.css.map */

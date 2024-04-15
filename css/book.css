@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Fredericka+the+Great&family=PT+Serif&family=Rajdhani&family=Raleway&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, label {
+  vertical-align: middle;
+}
+
+.h {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+section article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+section article img {
+  position: relative;
+  top: 33%;
+  left: 44%;
+  width: 16%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.5s;
+}
+section article .slogan {
+  position: absolute;
+  right: 8%;
+  top: 20%;
+  transform: translateY(-10%);
+  text-align: right;
+  padding: 40px;
+  perspective: 900px;
+}
+section article .slogan::before {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  opacity: 0;
+  transition: all 1.5s;
+}
+section article .slogan h2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+section article .slogan h2 .inner {
+  font: normal 38px/2 "Fredericka the Great";
+  color: #fff;
+  position: relative;
+  transform: scaleY(1.25);
+  opacity: 0;
+  transition: opacity 0.2s 0.5s;
+}
+section article .slogan h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  transition: right ease-in-out 1s;
+}
+section article .slogan .p1 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-right: 14px;
+}
+section article .slogan .p1 .inner {
+  background: rgba(0, 0, 0, 0.4);
+  font: 17px/1.4 "PT Serif";
+  color: #fff;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.2s 0.8s;
+}
+section article .slogan .p1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  transition: right ease-in-out 1s 0.3s;
+}
+section article .slogan .p2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-right: 14px;
+}
+section article .slogan .p2 .inner {
+  background: rgba(0, 0, 0, 0.4);
+  font: 15px/1.4 "PT Serif";
+  color: #fff;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.2s 1.1s;
+}
+section article .slogan .p2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  transition: right ease-in-out 1s 0.6s;
+}
+section article.on {
+  z-index: 3;
+}
+section article.on img {
+  opacity: 1;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  filter: drop-shadow(3px 3px 5px #bbb);
+}
+section article.on img:hover {
+  transform: scale(1.05);
+}
+section article.on .slogan::before {
+  opacity: 1;
+  transform: rotateY(220deg);
+}
+section article.on .slogan h2 .inner,
+section article.on .slogan .p1 .inner,
+section article.on .slogan .p2 .inner {
+  opacity: 1;
+}
+section article.on .slogan h2::after,
+section article.on .slogan .p1::after,
+section article.on .slogan .p2::after {
+  right: 100%;
+}
+section article.on.lower {
+  z-index: 2;
+}
+
+header {
+  width: 450px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 4;
+}
+header .logo {
+  display: flex;
+  position: relative;
+  margin-top: 40px;
+  margin-left: 30px;
+  object-fit: cover;
+  width: 16%;
+  overflow: hidden;
+  cursor: pointer;
+  filter: brightness(130%);
+}
+header h1 {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  margin-left: 18%;
+  font: bold 25px/2 "orbitron";
+  letter-spacing: 2px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(157.84deg, #f8d494 17.61%, #c19a52 23.28%, #dec291 25.83%, #d0a869 32.36%, #cfa967 37.74%, #fce8c5 42%, #ffdaa3 45.68%, #cfa967 53.62%, #fce8c5 59.01%, #f0c984 64.4%, #d09b5c 72.06%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+header #navi {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 0px;
+  transform: translateY(-30%);
+}
+header #navi li {
+  width: 450px;
+  height: 80px;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: transform 1.4s, opacity 1.4s;
+  transform-origin: left center;
+}
+header #navi li h2 {
+  font: bold 12px/1 "Raleway";
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+header #navi li h2::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  margin-top: 7px;
+  margin-bottom: 3px;
+  transition: 1.4s;
+}
+header #navi li p {
+  font: bold 15px/1 "Raleway";
+  color: #fff;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+header #navi li.on {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  text-shadow: 0px 0px 10px aqua;
+  transform: scale(1.1);
+  opacity: 1;
+}
+header #navi li.on h2::after {
+  width: 70px;
+}
+
+body {
+  background: #333;
+  font: 13px/1.4 "IM Fell French Canon";
+  letter-spacing: 1px;
+  color: #ddd;
+}
+body .background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=book.css.map */

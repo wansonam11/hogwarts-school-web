@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper</title>
+    <link rel="stylesheet" href="../css/movie.css">
+    <script src="https://kit.fontawesome.com/b4c3ff631b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="../img/swiper/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <img src="../img/timezone/background.webp" alt="background" class="background">
+    <header>
+
+        <h1> <img onclick="location.href='index.html'" src="../img/timezone/main_logo.png" alt="logo"
+                class="logo">Magical Timezone</h1>
+        <ul id="gnb">
+            <li>About</li>
+            <li>Community</li>
+            <li>Contact</li>
+        </ul>
+        <ul id="sns">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="far fa-envelope"></i></a></li>
+        </ul>
+
+    </header>
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="../img/timezone/post1.webp" alt="pic1">
+                        <h2>Philosopher's Stone</h2>
+                        <p><strong>Publication |</strong> November 4, 2001</p>
+                        <p><strong>Based on |</strong> J. K. Rowling</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="../img/timezone/post2.jpg" alt="pic2">
+                        <h2>Chamber of Secrets</h2>
+                        <p><strong>Publication |</strong> November 3, 2002</p>
+                        <p><strong>Based on |</strong> J. K. Rowling</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="../img/timezone/post3.jpg" alt="pic3">
+                        <h2>Prisoner of Azkaban</h2>
+                        <p><strong>Publication |</strong> May 23, 2004</p>
+                        <p><strong>Based on |</strong> J. K. Rowling</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="../img/timezone/post4.jpg" alt="pic4">
+                        <h2>Goblet of Fire</h2>
+                        <p><strong>Publication |</strong> November 18, 2005</p>
+                        <p><strong>Based on |</strong> J. K. Rowling</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="../img/timezone/post5.jpg" alt="pic5">
+                        <h2>Order of the Phoenix</h2>
+                        <p><strong>Publication |</strong> June 28, 2007</p>
+                        <p><strong>Based on |</strong> J. K. Rowling</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="../img/timezone/post6.webp" alt="pic6">
+                        <h2>Half-Blood Prince</h2>
+                        <p><strong>Publication |</strong> July 7, 2009</p>
+                        <p><strong>Based on |</strong> J. K. Rowling</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="../img/timezone/post7.jpg" alt="pic7">
+                        <h2>Deathly Hallows Part.1</h2>
+                        <p><strong>Publication |</strong> November 11, 2010</p>
+                        <p><strong>Based on |</strong> J. K. Rowling</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="../img/timezone/post8.webp" alt="pic8">
+                        <h2>Deathly Hallows Part.2</h2>
+                        <p><strong>Publication |</strong> July 7, 2011</p>
+                        <p><strong>Based on |</strong> J. K. Rowling</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <nav class="swiper-pagination"> </nav>
+        <nav class="swiper-button-prev"></nav>
+        <nav class="swiper-button-next"></nav>
+
+    </main>
+    <script>
+        const swiper = new Swiper("main", {
+            speed: 700,
+            loop: true,
+            direction: "horizontal",
+            grabCursor: true,
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction"
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next"
+            },
+
+            effect : "coverflow",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: -100,
+                depth: 600,
+                slideShadow: false,
+                slideShadows: false
+            }
+        });
+    </script>
+
+</body>
+
+</html>
